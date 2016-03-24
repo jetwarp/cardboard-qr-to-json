@@ -5,6 +5,9 @@ objects
 
 ## Usage
 
+Requires a recent enough version of Node to have a native `Promise`
+implementation. (`bin/detectDupes.js` requires a `Map` implementation.)
+
 Having gathered a `qrcodes` directory of viewer QR codes in this project's
 directory:
 
