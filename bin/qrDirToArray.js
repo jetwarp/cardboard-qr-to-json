@@ -16,7 +16,7 @@ Promise.all(fs.readdirSync(targetDir).map(function(filename) {
         .then(function(obj) {
           console.error('Completed: ' + filename);
           if (obj.vendor == '' && obj.model == '') {
-            obj.hint = filename;
+            obj.hint = filename.replace(/_/g,' ').replace(/\.[^.]*$/,'');
           }
           return obj;
         }).catch(function(err){
